@@ -73,11 +73,13 @@ namespace brynet { namespace net { namespace http {
             return std::make_shared<make_shared_enabler>(std::move(session));
         }
 
+    public:
         const TcpConnection::Ptr& getSession() const
         {
             return mSession;
         }
 
+    protected:
         const HttpParserCallback& getHttpCallback() const
         {
             return mHttpRequestCallback;
